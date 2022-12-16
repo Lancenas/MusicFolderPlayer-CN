@@ -35,46 +35,46 @@
 		<button id="toast" class="hide"></button>
 	</div>
 	<div id="options">
-		<button id="enqueue" title="Enqueue songs on click (E)" onclick="toggle(event)"><u>E</u>nqueue</button>
-		<button id="random" title="Randomize upcoming playlist songs (R)" onclick="toggle(event)"><u>R</u>andom</button>
-		<button id="crossfade" title="Crossfade between songs (O)" onclick="toggle(event)">Cr<u>o</u>ssfade</button>
-		<button id="playlistbtn" title="Playlist options (P)" onclick="toggle(event)"><u>P</u>laylist</button>
-		<button id="share" title="Share options (S)" onclick="toggle(event)"><u>S</u>hare</button>
-		<button id="lock" title="Lock playlist and playback controls (L)" onclick="toggle(event)"><u>L</u>ock</button>
+		<button id="enqueue" title="Enqueue songs on click (E)" onclick="toggle(event)">排序播放</button>
+		<button id="random" title="Randomize upcoming playlist songs (R)" onclick="toggle(event)">随机播放</button>
+		<button id="crossfade" title="Crossfade between songs (O)" onclick="toggle(event)">淡进淡出</button>
+		<button id="playlistbtn" title="Playlist options (P)" onclick="toggle(event)">播放列表</button>
+		<button id="share" title="Share options (S)" onclick="toggle(event)">分享</button>
+		<button id="lock" title="Lock playlist and playback controls (L)" onclick="toggle(event)">锁定</button>
 		<button id="logbtn" title="Show log (G)" onclick="toggle(event)">Lo<u>g</u></button>
 		<div id="playlistoptions">
 			<div id="playlistsdiv">
-				<button id="load" title="Add songs from online playlist (D)" onclick="menu(event)">Loa<u>d</u></button>
+				<button id="load" title="Add songs from online playlist (D)" onclick="menu(event)">载入</button>
 				<div id="playlists" title="L: Add songs (Enter)&#xA;R: Remove playlist" class="menu hide" onmouseleave="menu(event)"
 					onclick="loadPlaylistBtn(event)" oncontextmenu="removePlaylist(event)">
 				</div>
 			</div>
-			<button id="save" title="Save playlist online (V)" onclick="prepPlaylists('save')">Sa<u>v</u>e</button>
-			<button id="import" title="Add songs from exported playlist (I)" onclick="importPlaylist()"><u>I</u>mport</button>
-			<button id="export" title="Export current playlist to file (X)" onclick="exportPlaylist()">E<u>x</u>port</button>
+			<button id="save" title="Save playlist online (V)" onclick="prepPlaylists('save')">保存</button>
+			<button id="import" title="Add songs from exported playlist (I)" onclick="importPlaylist()">导入</button>
+			<button id="export" title="Export current playlist to file (X)" onclick="exportPlaylist()">导出</button>
 			<div id="afterdiv">
-				<button id="after" title="Define action after last playlist item (A)" onclick="menu(event)"><u>A</u>fter playlist</button>
+				<button id="after" title="Define action after last playlist item (A)" onclick="menu(event)">列表结束后</button>
 				<div id="afteroptions" class="menu hide" onmouseleave="menu(event)" onclick="toggle(event)">
-					<button id="stopplayback" title="Stop playing songs after last playlist item">Stop playback</button>
-					<button id="repeatplaylist" title="Restart playback from the top">Repeat playlist</button>
-					<button id="playlibrary" title="Continue from last song's position in library">Continue from library</button>
-					<button id="randomlibrary" title="Randomly select unplayed songs from the library">Random from library</button>
-					<button id="randomfiltered" title="Randomly select unplayed songs from the filtered library">Randomize filtered <span></span></button>
+					<button id="stopplayback" title="Stop playing songs after last playlist item">停止播放</button>
+					<button id="repeatplaylist" title="Restart playback from the top">循环播放</button>
+					<button id="playlibrary" title="Continue from last song's position in library">从库继续播放</button>
+					<button id="randomlibrary" title="Randomly select unplayed songs from the library">从库随机播放</button>
+					<button id="randomfiltered" title="Randomly select unplayed songs from the filtered library">随机过滤 <span></span></button>
 				</div>
 			</div>
 		</div>
 		<div id="shares">
 			<div class="folder sharediv">
 				<input id="folderuri" class="uri" onclick="this.select()" readonly>
-				<button id="folderdownload" class="download" title="Download folder" onclick="download('folder')"></button>
-				<button id="folderclip" class="link" title="Copy folder link to clipboard" onclick="clip('folder')"></button>
-				<button id="folderwhatsapp" class="whatsapp hide" title="Share folder link via WhatsApp" onclick="shareWhatsApp('folder')"></button>
+				<button id="folderdownload" class="download" title="下载目录" onclick="download('folder')"></button>
+				<button id="folderclip" class="link" title="复制目录分享链接到粘贴板" onclick="clip('folder')"></button>
+				<button id="folderwhatsapp" class="whatsapp hide" title="分享目录到WhatsApp" onclick="shareWhatsApp('folder')"></button>
 			</div>
 			<div class="song sharediv">
 				<input id="songuri" class="uri" onclick="this.select()" readonly>
-				<button id="songdownload" class="download" title="Download song" onclick="download('song')"></button>
-				<button id="songclip" class="link" title="Copy song link to clipboard" onclick="clip('song')"></button>
-				<button id="songwhatsapp" class="whatsapp hide" title="Share song link via WhatsApp" onclick="shareWhatsApp('song')"></button>
+				<button id="songdownload" class="download" title="下载这首" onclick="download('song')"></button>
+				<button id="songclip" class="link" title="复制这首分享链接到粘贴板" onclick="clip('song')"></button>
+				<button id="songwhatsapp" class="whatsapp hide" title="分享这首到WhatsApp" onclick="shareWhatsApp('song')"></button>
 			</div>
 			<div id="shareplaylist" class="playlist sharediv">
 				<input id="playlisturi" class="uri" placeholder="&#x25BE;" list="playlistdata" onclick="this.select()" onfocus="prepPlaylists('share')">
