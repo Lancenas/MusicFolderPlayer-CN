@@ -11,6 +11,12 @@
 	<title id="pagetitle">...</title>
 </head>
 <body onload="init()">
+	<p style="color:white; font-size:10px; text-align: center">
+		<b>&nbsp;&nbsp;&nbsp;&nbsp;
+		 	<a href="https://github.com/ltGuillaume/MusicFolderPlayer" target="_blank" style="color:white; font-size:10px;">Music Folder Player</a>&nbsp;&nbsp;&nbsp;&nbsp;
+			Shift-T 转换主题
+		</b>
+  	</p>
 	<span id="splash"></span>
 	<div id="player">
 		<img id="cover" src="music.png" title="L: Zoom to 300px, full size (Z)&#xA;R: Toggle dimming"
@@ -35,31 +41,31 @@
 		<button id="toast" class="hide"></button>
 	</div>
 	<div id="options">
-		<button id="enqueue" title="Enqueue songs on click (E)" onclick="toggle(event)">排序播放</button>
-		<button id="random" title="Randomize upcoming playlist songs (R)" onclick="toggle(event)">随机播放</button>
-		<button id="crossfade" title="Crossfade between songs (O)" onclick="toggle(event)">淡进淡出</button>
-		<button id="playlistbtn" title="Playlist options (P)" onclick="toggle(event)">播放列表</button>
-		<button id="share" title="Share options (S)" onclick="toggle(event)">分享</button>
-		<button id="lock" title="Lock playlist and playback controls (L)" onclick="toggle(event)">锁定</button>
-		<button id="logbtn" title="Show log (G)" onclick="toggle(event)">Lo<u>g</u></button>
+		<button id="enqueue" title="点击时添加单曲 (E)" onclick="toggle(event)">添加单曲</button>
+		<button id="random" title="随机播放列表的歌曲 (R)" onclick="toggle(event)">随机播放</button>
+		<button id="crossfade" title="歌曲间的交叉渐变s (O)" onclick="toggle(event)">淡进淡出</button>
+		<button id="playlistbtn" title="播放列表选项 (P)" onclick="toggle(event)">列表选项</button>
+		<button id="share" title="共享选项 (S)" onclick="toggle(event)">分享</button>
+		<button id="lock" title="锁定播放列表和播放控件 (L)" onclick="toggle(event)">锁定</button>
+		<button id="logbtn" title="显示日志 (G)" onclick="toggle(event)">日志</button>
 		<div id="playlistoptions">
 			<div id="playlistsdiv">
-				<button id="load" title="Add songs from online playlist (D)" onclick="menu(event)">载入</button>
-				<div id="playlists" title="L: Add songs (Enter)&#xA;R: Remove playlist" class="menu hide" onmouseleave="menu(event)"
+				<button id="load" title="添加在线播放列表中的歌曲 (D)" onclick="menu(event)">载入</button>
+				<div id="playlists" title="L: 添加歌曲 (Enter)&#xA;R: 从播放列表删除" class="menu hide" onmouseleave="menu(event)"
 					onclick="loadPlaylistBtn(event)" oncontextmenu="removePlaylist(event)">
 				</div>
 			</div>
-			<button id="save" title="Save playlist online (V)" onclick="prepPlaylists('save')">保存</button>
-			<button id="import" title="Add songs from exported playlist (I)" onclick="importPlaylist()">导入</button>
-			<button id="export" title="Export current playlist to file (X)" onclick="exportPlaylist()">导出</button>
+			<button id="save" title="在线保存播放列表 (V)" onclick="prepPlaylists('save')">保存</button>
+			<button id="import" title="添加来自导出播放列表的歌曲 (I)" onclick="importPlaylist()">导入</button>
+			<button id="export" title="导出当前播放列表文件归档 (X)" onclick="exportPlaylist()">导出</button>
 			<div id="afterdiv">
-				<button id="after" title="Define action after last playlist item (A)" onclick="menu(event)">列表结束后</button>
+				<button id="after" title="在上个播放列表之后定义动作 (A)" onclick="menu(event)">列表结束后</button>
 				<div id="afteroptions" class="menu hide" onmouseleave="menu(event)" onclick="toggle(event)">
-					<button id="stopplayback" title="Stop playing songs after last playlist item">停止播放</button>
-					<button id="repeatplaylist" title="Restart playback from the top">循环播放</button>
-					<button id="playlibrary" title="Continue from last song's position in library">从库继续播放</button>
-					<button id="randomlibrary" title="Randomly select unplayed songs from the library">从库随机播放</button>
-					<button id="randomfiltered" title="Randomly select unplayed songs from the filtered library">随机过滤 <span></span></button>
+					<button id="stopplayback" title="在上一个播放列表结束之后停止播放歌曲">停止播放</button>
+					<button id="repeatplaylist" title="从头循环开始播放">循环播放</button>
+					<button id="playlibrary" title="从上一首歌在音乐库的位置继续">从库继续播放</button>
+					<button id="randomlibrary" title="从音乐库随机选择未播放的歌曲">从库随机播放</button>
+					<button id="randomfiltered" title="从过滤库中随机选择未播放的歌曲">随机过滤 <span></span></button>
 				</div>
 			</div>
 		</div>
@@ -91,8 +97,8 @@
 			<div id="trash" class="hide" onclick="toggle(event)"
 					ondragover="allowDrop(event)" ondrop="removeItem(event); cls(this, 'drop', REM)"
 					ondragenter="cls(this, 'drop', ADD)" ondragleave="cls(this 'drop', REM)">
-				<button id="clear" class="clear" title="Clear the playlist (C)"><u>C</u>lear</button>
-				<button id="remove" title="Remove playlist items">Remove</button>
+				<button id="clear" class="clear" title="清空播放列表 (C)"><u>清空列表</button>
+				<button id="remove" title="删除播放列表项目">删除选中</button>
 			</div>
 			<ul id="playlist" onclick="clickItem(event)" oncontextmenu="findItem(event)"
 				ondragstart="prepDrag(event)" ondragover="allowDrop(event)" ondragend="endDrag()" ondrop="dropItem(event)"
@@ -103,13 +109,13 @@
 	<div id="library">
 		<div>
 			<div class="hoverdiv">
-				<button id="reload" title="Reload library (F5)" onclick="reloadLibrary()"></button>
-				<button id="unfold" title="Show/hide library tree (T)" onclick="toggle(event)"></button>
+				<button id="reload" title="重新加载音乐库 (F5)" onclick="reloadLibrary()"></button>
+				<button id="unfold" title="显示/隐藏 音乐库目录 (T)" onclick="toggle(event)"></button>
 			</div>
 			<div id="filterdiv">
-				<input id="filter" title="Filter library (F)" placeholder="Filter..." onchange="filter()" onfocus="this.select()" onclick="setFocus(this)">
-				<button class="filter" title="Apply filter (Enter)" onclick="filter()"></button>
-				<button class="clear" title="Clear filter (Esc)" onclick="clearFilter()"></button>
+				<input id="filter" title="输入过滤项 (F)" placeholder="过滤..." onchange="filter()" onfocus="this.select()" onclick="setFocus(this)">
+				<button class="filter" title="使用音乐库过滤 (Enter)" onclick="filter()"></button>
+				<button class="clear" title="清空过滤器 (Esc)" onclick="clearFilter()"></button>
 			</div>
 			<ul id="tree" onclick="libClick(event)" oncontextmenu="libClick(event, true)"
 				title="L: Open folder | Play/Enqueue song (Enter)&#xA;R: Enqueue folder | Play next (Shift-Enter)"></ul>
