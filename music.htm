@@ -9,6 +9,7 @@
 	<link rel="icon" href="music.png" type="image/png">
 	<script src="music.js"></script>
 	<title id="pagetitle">...</title>
+	<script src="Js/base-loading.js"></script>
 </head>
 <body onload="init()">
 	<p style="color:white; font-size:10px; text-align: center">
@@ -43,7 +44,7 @@
 	<div id="options">
 		<button id="enqueue" title="点击时添加单曲 (E)" onclick="toggle(event)">添加单曲</button>
 		<button id="random" title="随机播放列表的歌曲 (R)" onclick="toggle(event)">随机播放</button>
-		<button id="crossfade" title="歌曲间的交叉渐变s (O)" onclick="toggle(event)">淡进淡出</button>
+		<button id="crossfade" title="歌曲间的交叉渐变 (O)" onclick="toggle(event)">淡进淡出</button>
 		<button id="playlistbtn" title="播放列表选项 (P)" onclick="toggle(event)">列表选项</button>
 		<button id="share" title="共享选项 (S)" onclick="toggle(event)">分享</button>
 		<button id="lock" title="锁定播放列表和播放控件 (L)" onclick="toggle(event)">锁定</button>
@@ -183,7 +184,7 @@
 				else
 				visits = parseInt(visits) + 1
 				setCookie("counter", visits, now)
-				document.write("您是第" + visits + "位访问者！")
+				document.write("您访问了本站" + visits + "次！")
 			// -->
 		</script>
 	</p>
