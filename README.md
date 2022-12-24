@@ -1,6 +1,4 @@
 ## 本库仅是汉化了部分显示信息
-### 存在的问题
-- 中文目录名和曲名，分享时正常下载，但链接编码后不能正常保存到粘贴板。英文目录名和曲名正常。
 
 
 <a href="https://buymeacoff.ee/ltGuillaume"><img title="Donate using Buy Me a Coffee" src="https://raw.githubusercontent.com/ltGuillaume/Resources/master/buybeer.svg"></a> <a href="https://liberapay.com/ltGuillaume/donate"><img title="Donate using Liberapay" src="https://raw.githubusercontent.com/ltGuillaume/Resources/master/liberapay.svg"></a>
