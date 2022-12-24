@@ -1,5 +1,5 @@
 ## 说明
-- 本库是[ltGuillaume/MusicFolderPlayer](https://github.com/ltGuillaume/MusicFolderPlayer)适配中文环境
+- 本项目是[ltGuillaume/MusicFolderPlayer](https://github.com/ltGuillaume/MusicFolderPlayer)适配中文环境，源代码同步更新。
 - 个人需要增加了一些功能代码
 
 
