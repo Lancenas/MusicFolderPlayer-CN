@@ -1,4 +1,7 @@
 <!DOCTYPE html>
+<?php
+  include "counter.inc.php";
+?>
 <html id="doc" class="hide">
 <head>
 	<meta charset="UTF-8"/>
@@ -134,27 +137,7 @@
 			</div>
 			<textarea id="log"></textarea>
 		</div>
-	</div>
-	<?php
-   		$max_len = 9;
-		$CounterFile = "counter.dat";
-		if(!file_exists($CounterFile)){  
-			 $counter = 0;     
-			 $cf = fopen($CounterFile,"w");  
-			 fputs($cf,'0'); 
-			 fclose($cf);  
-        }
-		else{  
-		    $cf = fopen($CounterFile,"r");
-		    $counter = trim(fgets($cf,$max_len));
-		    fclose($cf);
-		}
-		$counter++;  
-		$cf = fopen($CounterFile,"w");  
-		fputs($cf,$counter);
-		fclose($cf);
-	?>
-	
+	</div>	
 	<div id="dd" align=center>
 	  <span>欢迎您!</span>
 	  <span>您是本站的第
