@@ -1,6 +1,6 @@
 <?php
    	$max_len = 9;
-		$CounterFile = "./counter.dat";
+		$CounterFile = "counter.dat";
 		if(!file_exists($CounterFile)){
 			 $counter = 0;     
 			 $cf = fopen($CounterFile,"w");
