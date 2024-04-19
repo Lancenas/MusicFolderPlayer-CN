@@ -1,3 +1,4 @@
+## **本库停止更新，中文翻译已经和源项目[ltGuillaume/MusicFolderPlayer](https://github.com/ltGuillaume/MusicFolderPlayer)合并，直接Git部署中文音乐文件播放web站。**
 ## 说明
 - 本项目是[ltGuillaume/MusicFolderPlayer](https://github.com/ltGuillaume/MusicFolderPlayer)适配中文环境，源代码同步更新。
 - 个人需要增加了一些功能代码
